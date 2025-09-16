@@ -1,6 +1,6 @@
 
 <h1 align = "center">
-    Resposta do exercicio "1"
+    <p style="color: green;">Resposta do exercicio "1"</p>
 </h1>
 
 1 - A)Com suas palavras defina oque é um sistema de controle de versões(VCS) (máx 10 linhas)
