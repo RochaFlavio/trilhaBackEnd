@@ -22,4 +22,3 @@
 1. *Git* 
 2. *Subversion* 
 3. *Mercurial* 
-
