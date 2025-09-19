@@ -1,4 +1,4 @@
-package curso_programacao.ExercicioDeLogica;
+package ExercicioDeLogica;
 
 import java.util.Scanner;
 

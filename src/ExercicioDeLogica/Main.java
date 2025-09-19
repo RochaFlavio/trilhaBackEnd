@@ -1,4 +1,4 @@
-package curso_programacao;
+package ExercicioDeLogica;
 
 import java.util.Locale;
 

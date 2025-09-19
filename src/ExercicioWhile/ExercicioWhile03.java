@@ -1,4 +1,4 @@
-package curso_programacao.ExercicioWhile;
+package ExercicioWhile;
 
 import java.util.Scanner;
 
@@ -24,7 +24,8 @@ public class ExercicioWhile03 {
 			}
 			opcao = sc.nextInt();
 		}
-		System.out.printf("MUITO OBRIGADO \nAlcool: %d \nGasolina: %d \nDiesel: %d", alcool, gasolina, diesel);
+		System.out.printf("MUITO OBRIGADO \nAlcool: %d \nGasolina: %d \nDiesel: %d"
+				,alcool, gasolina, diesel);
 
 		sc.close();
 	}
