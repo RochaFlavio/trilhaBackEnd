@@ -1,9 +1,9 @@
 
 <img width="1248" height="832" alt="Gemini_Generated_Image_1z47hx1z47hx1z47" src="https://github.com/user-attachments/assets/d63e4470-fadb-4b86-8a1f-dd0f219c0b60" />
 
-# Desafio 02
+# **Desafio 02**
 
-## Respostas:
+## **Respostas:**
 
 **2 -A) Com suas palavras defina o que é programação orientada a objetos(POO) e cite seus pilares ? (máx 10 linhas) :**
 
