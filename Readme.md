@@ -1,4 +1,5 @@
-Gemini_Generated_Image_1z47hx1z47hx1z47.png
+
+<img width="1248" height="832" alt="Gemini_Generated_Image_1z47hx1z47hx1z47" src="https://github.com/user-attachments/assets/d63e4470-fadb-4b86-8a1f-dd0f219c0b60" />
 # Desafio 02
 ## Respostas:
 
