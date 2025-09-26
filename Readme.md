@@ -1,5 +1,4 @@
-![Uploading Gemini_Generated_Image_1z47hx1z47hx1z47.png…]()
-
+Gemini_Generated_Image_1z47hx1z47hx1z47.png
 # Desafio 02
 ## Respostas:
 
