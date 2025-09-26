@@ -1,3 +1,6 @@
+
+<img width="1248" height="832" alt="Gemini_Generated_Image_chpxu9chpxu9chpx" src="https://github.com/user-attachments/assets/b9bd0105-bdbe-43e0-856f-843d1da36f11" />
+
 # **Desafio 03**
 
 ## **Respostas:**
