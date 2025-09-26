@@ -1,25 +1,37 @@
+# **Desafio 03**
 
-# Desafio 01
-
-## Respostas:
-**1 - A)Com suas palavras defina oque é um sistema de controle de versões(VCS) (máx 10 linhas)**
-
-**RESP:**  *Um sistema de controle é uma ótima maneira de organizar projetos em equipe. Esse sistema permite que os programadores façam suas linhas de código, testem e implementem alterações sem mexer no código do outro, e evita que nessas alterações quebre parte do código que estava funcionando. Então, com isso, todos têm acesso ao projeto "simultaneamente" e podem ter acesso ao histórico das alterações, escrever e alimentar o sistema com suas linhas, testar novas implementações sem que seja feita alguma alteração no código original ou quebre alguma linha do código de algum membro da equipe.* 
-
- **1 - B)Cite 5 vantagens de utilizar um VCS:**
-
-**RESP:**  
-1. *Facilita a organização em projetos feitos em grupo.*
-2. *Aletrações podem ser feitas "Simultaniamente".*
-3. *Cada um pode fazer suas alterações/testar nas linhas do projeto sem que quebre o código do colega.*
-4.  *É criado um histórico de tudo que é feito no projeto, com isso podemos ver versões anteriores onde ajuda fazer alguma consulta caso necessário e se a nova implementaç~~ao der algum problema podemos voltar a versão anterior para manter o sistema funcional.*
-5. *Todos podem acompanhar o desenvolvimento do projeto juntos.*
+## **Respostas:**
 
 
- **1 - C)Cite 3 exemplos de VCS:** 
+**O que é o protocolo de comunicação HTTP e como ele funciona?**
 
-**RESP:**  
-1. *Git* 
-2. *Subversion* 
-3. *Mercurial* 
+**Resp :**
+*Podemos dizer que HTTP é uma comunicação direcionada à web por meio de URLs, onde é feita alguma solicitação e essa solicitação é retornada por diferentes métodos REST. No caso, se for para busca de informação, é feito por um GET; PUT para atualizar; POST para incluir; e DELETE para remover. Resumindo, HTTP é a forma que o cliente conversa diretamente com o servidor para buscar o que precisa.*
 
+**O que é REST e qual é a sua relação com o protocolo HTTP?**
+
+**Resp :**
+*REST é um formato de organizar e padronizar o jeito que as informações são buscadas e entregues. Sua relação com HTTP é fundamental justamente para isso: o cliente faz uma solicitação que vem através do HTTP pelas URLs, e o REST organiza e padroniza o retorno dessas informações para o cliente.*
+
+**O que é Web API e qual é a sua relação com REST?**
+
+**Resp :**
+*Web API é o mapeamento no código onde definimos as funções do REST, e essa é a relação entre os dois.*
+
+**Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades.**
+
+**Resp :**
+*Os métodos de solicitações HTTP utilizados pelo padrão REST são: GET, POST, PUT e DELETE.*
+
+* GET: Utilizado para buscar a informação solicitada.
+
+* POST: Utilizado para incluir dados ou criar.
+
+* PUT: Utilizado para atualizar os dados.
+
+* DELETE: Como o próprio nome já diz, é utilizado para exclusão de dados.
+
+**O que é Swagger?**
+
+**Resp :**
+É uma ferramenta que auxilia na documentação e no teste da nossa Web API e dos nossos métodos REST.
