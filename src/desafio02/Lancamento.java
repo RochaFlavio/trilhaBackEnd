@@ -26,14 +26,20 @@ public class Lancamento {
         this.idCategoria = idCategoria;
     }
 
-    @Override
-    public String toString() {
-        return "id: " + id + ", nome: " + nome + ", descrição: " + descricao +
-                ", tipo: " + tipo + ", quantidade: " + quantidade + ", data: " + data +
-                ", pago: " + pago + ", idCategoria: " + idCategoria;
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Lancamento{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", quantidade=" + quantidade +
+                ", data='" + data + '\'' +
+                ", pago=" + pago +
+                ", idCategoria=" + idCategoria +
+                '}';
     }
 
-   
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     

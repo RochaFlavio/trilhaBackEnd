@@ -5,19 +5,23 @@ public class Categoria {
     private String nome;
     private String descricao;
 
-   
+
     public Categoria() {}
 
-    
+
     public Categoria(int id, String nome, String descricao) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
     }
 
-    @Override
-    public String toString() {
-        return "id: " + id + ", nome: " + nome + ", descrição: " + descricao;
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Categoria{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                '}';
     }
 
     public int getId() { return id; }
