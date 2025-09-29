@@ -1,55 +1,40 @@
 
-<img width="1248" height="832" alt="Gemini_Generated_Image_1z47hx1z47hx1z47" src="https://github.com/user-attachments/assets/d63e4470-fadb-4b86-8a1f-dd0f219c0b60" />
+<img width="1248" height="832" alt="Gemini_Generated_Image_chpxu9chpxu9chpx" src="https://github.com/user-attachments/assets/b9bd0105-bdbe-43e0-856f-843d1da36f11" />
 
-# **Desafio 02**
+# **Desafio 03**
 
 ## **Respostas:**
 
-**2 -A) Com suas palavras defina o que é programação orientada a objetos(POO) e cite seus pilares ? (máx 10 linhas) :**
+
+**O que é o protocolo de comunicação HTTP e como ele funciona?**
 
 **Resp :**
-*Orientação a objeto é uma forma de organizar o código separando e organizando Atributos, Métodos e o próprio Objeto. Para simplificar, Orientação a objetos é programar pensando em objetos que têm características que são os (atributos) e comportamentos que podemos dizer que são os (métodos).*
+*Podemos dizer que HTTP é uma comunicação direcionada à web por meio de URLs, onde é feita alguma solicitação e essa solicitação é retornada por diferentes métodos REST. No caso, se for para busca de informação, é feito por um GET; PUT para atualizar; POST para incluir; e DELETE para remover. Resumindo, HTTP é a forma que o cliente conversa diretamente com o servidor para buscar o que precisa.*
 
-**Seus pilares são :**
-1. *Abstração*
-2. *Encapsulamento*
-3. *Herança*
-4. *Polimorfismo*
-
-**2 -B) Exemplifique e explique um cenário de abstração :**
+**O que é REST e qual é a sua relação com o protocolo HTTP?**
 
 **Resp :**
-*Foca nos aspetos essenciais de um objeto, ocultando detalhes de implementação complexos e focando no que é relevante para o sistema.  No caso os (DTOs)* 
+*REST é um formato de organizar e padronizar o jeito que as informações são buscadas e entregues. Sua relação com HTTP é fundamental justamente para isso: o cliente faz uma solicitação que vem através do HTTP pelas URLs, e o REST organiza e padroniza o retorno dessas informações para o cliente.*
 
-**Exemplo :** *Quando temos os dados pessoais de clientes mas para não expor CPF, RG, End, etc... Filtramos para aparecer apenas o necessário exemplo nome e algum outro dado caso queira* 
-
-
-**2 -C) Exemplifique e explique um cenário de encapsulamento :**
+**O que é Web API e qual é a sua relação com REST?**
 
 **Resp :**
-*A prática de agrupar dados (atributos) e as funções que operam sobre esses dados (métodos) dentro de uma única unidade (o objeto), controlando o acesso e protegendo o estado interno.*
+*Web API é o mapeamento no código onde definimos as funções do REST, e essa é a relação entre os dois.*
 
-**Exemplo :** *São aquelas definições que fazemos no inicios das classes como o private, public, etc...* 
-
-**2 -D) Exemplifique e explique um cenário de herança :**
+**Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades.**
 
 **Resp :**
-*Permite que uma nova classe (subclasse) herde as características (atributos e métodos) de uma classe existente (superclasse), promovendo a reutilização de código e a criação de hierarquias.*
+*Os métodos de solicitações HTTP utilizados pelo padrão REST são: GET, POST, PUT e DELETE.*
 
-**Exemplo :** *É quando fazer a extenção de uma classe já existente em outra, nesse caso usamos o "extends" para fazer essa extenção e usar métodos ou atributos já criados em outro local* 
+* GET: Utilizado para buscar a informação solicitada.
 
-**2 - E) Exemplifique e explique um cenário de polimorfismo :**
+* POST: Utilizado para incluir dados ou criar.
+
+* PUT: Utilizado para atualizar os dados.
+
+* DELETE: Como o próprio nome já diz, é utilizado para exclusão de dados.
+
+**O que é Swagger?**
 
 **Resp :**
-*A capacidade de objetos de diferentes classes responderem a uma mesma mensagem (ou método) de maneiras distintas.*  
-
-**Exemplo :** *Polimorfismo  é quando usamos o objeto de uma classe em outra e subescrevemos ele para que ele tenha um comportamento diferente*  
-
-**2 -F) Cite 5 vantagens da POO :**
-
-**Resp :**
-1. *Podemos reaproveitar códigos já escritos*
-2. *Sistema fica mais organizado* 
-3. *Por ter essa organização e cada coisa ser separada ajuda caso precise de alguma manutenção* 
-4. *Facilita fazemos adição e modificações em códigos existentes* 
-5. *Voltando para organização isso trás a melhor eficacia para programadores trabalharem em diferentes parte do código separadamente*
+É uma ferramenta que auxilia na documentação e no teste da nossa Web API e dos nossos métodos REST.
