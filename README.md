@@ -1,22 +1,11 @@
-<img width="1536" height="1024" alt="ChatGPT Image 28 de out  de 2025, 08_26_55" src="https://github.com/user-attachments/assets/1223b51b-e3a5-4e58-a9b0-a4abe9107222" />
+<img width="1536" height="1024" alt="ChatGPT Image 29 de out  de 2025, 08_53_38" src="https://github.com/user-attachments/assets/b47aea82-5f95-40f6-9396-5dfae2a33df7" />
 
-# **Desafio 05**
+# **Desafio 06**
 
 ## **Respostas:**
 
 
-**1.** *Defina com suas palavras qual é a responsabilidade das camadas vistas até
-agora, **entity**, **controller**, **repository** e **service**.*
+**1.** *O que significa **DTO**, e qual sua importância?.*
 
 **Resp:**
-
-* **Entity:** *A representação dos dados, o "modelo" do seu objeto, como um Usuário ou Produto.*
-
-
-* **Controller:** *Responsável por receber as requisições do usuário e direcioná-las para a lógica apropriada. Ele atua como um intermediário entre a requisição e a camada de serviço.*
-
-
-* **Repository:** *Cuida do acesso e persistência dos dados, atuando como a ponte com o banco de dados para operações de guardar, buscar ou alterar informações.*
-
-
-* **Service:** *Contém a lógica de negócio e as regras da aplicação. É o serviço que orquestra as ações e validações, utilizando o repositório quando necessário.* 
+**DTO** *é a sigla para **Data Transfer Object (Objeto de Transferência de Dados)**. O **DTO** é uma peça-chave na construção de aplicações que prezam pela **performance**, **segurança** e uma **arquitetura organizada**, especialmente em sistemas que se comunicam por meio de interfaces remotas.*
