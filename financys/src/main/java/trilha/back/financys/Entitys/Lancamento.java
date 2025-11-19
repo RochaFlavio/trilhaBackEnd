@@ -3,7 +3,10 @@ package trilha.back.financys.Entitys;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
 import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
@@ -18,13 +21,33 @@ public class Lancamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Nome não pode ser nulo ou vazio")
+    @Size(min = 3, max = 45, message = "O nome deve ter entre 3 e 45 caracteres")
     private String nome;
+
+    @NotBlank(message = "Descrição não pode ser nula ou vazia")
+    @Size(min = 15, max = 150, message = "A descrição deve ter entre 15 e 150 caracteres")
     private String descricao;
-    private String tipo;
+
+    @NotNull(message = "Tipo não pode ser nulo")
+    @Enumerated(EnumType.STRING)           // <<--- USE STRING (importantíssimo)
+    @Column(name = "tipo", length = 20)
+    @Size(min = 3, max = 50, message = "O tipo deve ter entre 3 e 50 caracteres")
+    private TipoLancamento tipo;
+
+    @NotNull(message = "Quantidade não pode ser nula")
+    @PositiveOrZero(message = "A quantidade não pode ser negativa")
     private Integer quantidade;
+
+    @NotNull(message = "Data não pode ser nula")
     private LocalDate data;
+
+
+    @NotNull(message = "Campo 'pago' não pode ser nulo")
     private Boolean pago;
-    @NotNull
+
+
+    @PositiveOrZero(message = "O valor não pode ser negativo")
     private BigDecimal valor;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -35,8 +58,8 @@ public class Lancamento {
     public Lancamento() {
     }
 
-    public Lancamento(Long id, String nome, String descricao, String tipo,
-                      Integer quantidade, LocalDate data, Boolean pago, Categoria categoria, @NotNull BigDecimal valor) {
+    public Lancamento(Long id, String nome, String descricao, TipoLancamento tipo,
+                      Integer quantidade, LocalDate data, Boolean pago, Categoria categoria,  BigDecimal valor) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -124,11 +147,11 @@ public class Lancamento {
         this.descricao = descricao;
     }
 
-    public String getTipo() {
+    public TipoLancamento getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoLancamento tipo) {
         this.tipo = tipo;
     }
 

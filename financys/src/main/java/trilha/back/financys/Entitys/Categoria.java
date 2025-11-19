@@ -2,6 +2,8 @@ package trilha.back.financys.Entitys;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.EqualsAndHashCode;
 
 @Table(name = "categorias")
@@ -13,7 +15,12 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Nome não pode ser Nulo ou Vazio")
+    @Size(min = 3, max = 15, message = "O nome deve ter entre 3 e 15 caracteres." )
     private String nome;
+
+    @NotBlank(message = "descrição não pode ser Nulo ou Vazio")
+    @Size(min = 15, max = 50, message = "A descriçãp deve ter entre 15 e 50 caracteres.")
     private String descricao;
 
     public void atualizarCategoria(@Valid Categoria dados) {

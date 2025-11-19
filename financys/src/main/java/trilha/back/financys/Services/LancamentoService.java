@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import trilha.back.financys.DTOs.DtoChart;
 import trilha.back.financys.DTOs.LancamentoMapper;
 import trilha.back.financys.Entitys.Lancamento;
+import trilha.back.financys.Entitys.TipoLancamento;
 import trilha.back.financys.Repositorys.CategoriaRepository;
 import trilha.back.financys.Repositorys.LancamentoRepository;
 
@@ -77,35 +78,40 @@ public class LancamentoService {
     }
 
     public List<DtoChart> gerarChartPorCategoriaETipo() {
-        List<Lancamento> lancamentos = lancamentoRepository.findAll();
+        // converte cada Lancamento em DtoChart (via mapper), agrupa por chave (nome + "::" + tipoNome)
+        Map<String, BigDecimal> somaPorChave = lancamentoRepository.findAll()
+                .stream()
+                .map(lancamentoMapper::toDTOChart) // DtoChart deve ter .nome(), .tipo() (enum) e .total()
+                .filter(d -> d != null) // só por segurança
+                .collect(Collectors.groupingBy(
+                        d -> (d.nome() == null ? "SEM_CATEGORIA" : d.nome()) + "::" + (d.tipo() == null ? "SEM_TIPO" : d.tipo().name()),
+                        Collectors.mapping(
+                                d -> d.total() == null ? BigDecimal.ZERO : d.total(),
+                                Collectors.reducing(BigDecimal.ZERO, BigDecimal::add)
+                        )
+                ));
 
-        // chave composta: nomeCategoria + "::" + tipo (evite colisões com separador único)
-        Map<String, BigDecimal> somaPorChave = new HashMap<>();
-        Map<String, String> chaveParaNome = new HashMap<>();
-        Map<String, String> chaveParaTipo = new HashMap<>();
+        List<DtoChart> resultado = somaPorChave.entrySet()
+                .stream()
+                .map(e -> {
+                    String chave = e.getKey();
+                    BigDecimal total = e.getValue() == null ? BigDecimal.ZERO : e.getValue();
+                    String[] parts = chave.split("::", 2);
+                    String nome = parts.length > 0 ? parts[0] : "SEM_CATEGORIA";
+                    String tipoStr = parts.length > 1 ? parts[1] : "SEM_TIPO";
 
-        for (Lancamento l : lancamentos) {
-            String nomeCategoria = (l.getCategoria() != null && l.getCategoria().getNome() != null)
-                    ? l.getCategoria().getNome()
-                    : "SEM_CATEGORIA";
-            String tipo = (l.getTipo() != null) ? l.getTipo().toString() : "SEM_TIPO";
-            BigDecimal valor = (l.getValor() != null) ? l.getValor() : BigDecimal.ZERO;
+                    TipoLancamento tipoEnum = null;
+                    try {
+                        if (!"SEM_TIPO".equals(tipoStr)) {
+                            tipoEnum = TipoLancamento.valueOf(tipoStr);
+                        }
+                    } catch (IllegalArgumentException ex) {
+                        tipoEnum = null;
+                    }
 
-            String chave = nomeCategoria + "::" + tipo;
-
-            somaPorChave.merge(chave, valor, BigDecimal::add);
-            chaveParaNome.put(chave, nomeCategoria);
-            chaveParaTipo.put(chave, tipo);
-        }
-
-        List<DtoChart> resultado = new ArrayList<>();
-        for (Map.Entry<String, BigDecimal> e : somaPorChave.entrySet()) {
-            String chave = e.getKey();
-            BigDecimal total = e.getValue();
-            String nome = chaveParaNome.get(chave);
-            String tipo = chaveParaTipo.get(chave);
-            resultado.add(new DtoChart(nome, tipo, total));
-        }
+                    return new DtoChart(nome, tipoEnum, total);
+                })
+                .collect(Collectors.toList());
 
         return resultado;
     }
