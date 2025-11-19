@@ -1,40 +1,22 @@
-<img width="1248" height="832" alt="Gemini_Generated_Image_w7pahtw7pahtw7pa" src="https://github.com/user-attachments/assets/cd17446e-3230-4d24-81eb-bc9d35b0984d" />
+<img width="1536" height="1024" alt="ChatGPT Image 28 de out  de 2025, 08_26_55" src="https://github.com/user-attachments/assets/1223b51b-e3a5-4e58-a9b0-a4abe9107222" />
 
-# **Desafio 04**
+# **Desafio 05**
 
 ## **Respostas:**
 
 
-**O que é JDBC ?**
+**1.** *Defina com suas palavras qual é a responsabilidade das camadas vistas até
+agora, **entity**, **controller**, **repository** e **service**.*
 
-**Resp :**
-*JDBC é uma API que permite a conecção e comunicação da sua aplicação JAVA com o banco de dados.*
+**Resp:**
 
-**O que é ORM, cite 3 exemplos ?**
-
-**Resp :**
-*ORM é oque traduz nossa aplicação para linguagem do banco de dados fazendo com que oque foi digitado no código seja  convertido e entendido pelo banco de dados.*
-
-*Exemplo de ORM: Hibernate (para Java), Django ORM (para Python), Entity Framework (para C#)*
+* **Entity:** *A representação dos dados, o "modelo" do seu objeto, como um Usuário ou Produto.*
 
 
-**O que é JPA e qual é a sua relação com os ORM's ?**
-
-**Resp :**
-*JPA são as anotações e a API (interface) que seguimos para dar instruções ao ORM sobre como mapear nossos objetos para o banco de dados. O ORM, por sua vez, é a ferramenta que lê essas instruções e executa a conversão do código para a linguagem que o banco de dados entende, como o SQL. E essa é a relação entre eles, o JPA define os padrões e as regras e o ORM converte para linguagem que o banco entenda.*
+* **Controller:** *Responsável por receber as requisições do usuário e direcioná-las para a lógica apropriada. Ele atua como um intermediário entre a requisição e a camada de serviço.*
 
 
+* **Repository:** *Cuida do acesso e persistência dos dados, atuando como a ponte com o banco de dados para operações de guardar, buscar ou alterar informações.*
 
-**O que éSpring Data ?**
 
-**Resp :**
-*Spring Data é uma dependência que simplifica métodos de alguma solicitação específica no banco de dados. Com ele, temos métodos criados para fazer essa conversão para a gente, o que economiza linhas e linhas de código para uma função.*
-
-**O que caracteriza um projeto "CRUD" básico ?**
-
-**Resp :**
-*Um projeto CRUD básico é caracterizado pela capacidade de executar as quatro operações fundamentais de gerenciamento de dados sobre um recurso. A sigla CRUD é um acrônimo para:*
-* *Create (Criar): a operação de inserir novos dados em um repositório (como um banco de dados).*
-* *Read (Ler): a operação de consultar ou buscar dados existentes.*
-* *Update (Atualizar): a operação de modificar dados já existentes.*
-* *Delete (Apagar): a operação de remover dados permanentemente.*
+* **Service:** *Contém a lógica de negócio e as regras da aplicação. É o serviço que orquestra as ações e validações, utilizando o repositório quando necessário.* 
