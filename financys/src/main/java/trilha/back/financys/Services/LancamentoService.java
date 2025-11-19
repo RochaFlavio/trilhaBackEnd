@@ -78,11 +78,11 @@ public class LancamentoService {
     }
 
     public List<DtoChart> gerarChartPorCategoriaETipo() {
-        // converte cada Lancamento em DtoChart (via mapper), agrupa por chave (nome + "::" + tipoNome)
+
         Map<String, BigDecimal> somaPorChave = lancamentoRepository.findAll()
                 .stream()
-                .map(lancamentoMapper::toDTOChart) // DtoChart deve ter .nome(), .tipo() (enum) e .total()
-                .filter(d -> d != null) // só por segurança
+                .map(lancamentoMapper::toDTOChart)
+                .filter(d -> d != null) 
                 .collect(Collectors.groupingBy(
                         d -> (d.nome() == null ? "SEM_CATEGORIA" : d.nome()) + "::" + (d.tipo() == null ? "SEM_TIPO" : d.tipo().name()),
                         Collectors.mapping(
