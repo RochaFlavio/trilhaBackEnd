@@ -1,6 +1,6 @@
 package trilha.back.financys.ClassComMain;
 
-import trilha.back.financys.entitys.Lancamento;
+import trilha.back.financys.Entitys.Lancamento;
 
 public class AppLancamento {
 

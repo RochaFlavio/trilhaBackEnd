@@ -1,6 +1,6 @@
 package trilha.back.financys.ClassComMain;
 
-import trilha.back.financys.entitys.Produto;
+import trilha.back.financys.Entitys.Produto;
 
 import java.util.ArrayList;
 import java.util.Comparator;

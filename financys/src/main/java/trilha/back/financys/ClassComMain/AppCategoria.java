@@ -1,6 +1,6 @@
 package trilha.back.financys.ClassComMain;
 
-import trilha.back.financys.entitys.Categoria;
+import trilha.back.financys.Entitys.Categoria;
 
 public class AppCategoria {
 

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8704624e-69c1-44e0-88d5-7a4f62efb4f2" name="Changes" comment="Desafio 2 ajustado">
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/ClassComMain/AppCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/ClassComMain/AppCategoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/ClassComMain/AppLancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/ClassComMain/AppLancamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/ClassComMain/AppProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/ClassComMain/AppProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/entitys/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/entitys/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/entitys/Lancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/entitys/Lancamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/trilha/back/financys/entitys/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/entitys/Produto.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="DESAFIO-2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RochaFlavio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RochaFlavio/trilhaBackEnd.git&quot;,
+    &quot;accountId&quot;: &quot;6647d516-6af9-442f-bb91-afc66a8c63e5&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="35fb141cjTD41QdipmTHYpSQR12" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppProduto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DESAFIO-3&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/flavi/OneDrive/Documentos/trilhaBackEnd&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\flavi\OneDrive\Documentos\trilhaBackEnd\financys\src\main\java\trilha\back\financys" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8704624e-69c1-44e0-88d5-7a4f62efb4f2" name="Changes" comment="" />
+      <created>1763503857967</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763503857967</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Desafio 2 ajustado">
+      <option name="closed" value="true" />
+      <created>1763514350884</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763514350884</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Desafio 2 ajustado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Desafio 2 ajustado" />
+  </component>
+</project>
