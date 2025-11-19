@@ -1,39 +1,40 @@
-<img width="1248" height="832" alt="Gemini_Generated_Image_chpxu9chpxu9chpx" src="https://github.com/user-attachments/assets/b9bd0105-bdbe-43e0-856f-843d1da36f11" />
+<img width="1248" height="832" alt="Gemini_Generated_Image_w7pahtw7pahtw7pa" src="https://github.com/user-attachments/assets/cd17446e-3230-4d24-81eb-bc9d35b0984d" />
 
-# **Desafio 03**
+# **Desafio 04**
 
 ## **Respostas:**
 
 
-**O que é o protocolo de comunicação HTTP e como ele funciona?**
+**O que é JDBC ?**
 
 **Resp :**
-*Podemos dizer que HTTP é uma comunicação direcionada à web por meio de URLs, onde é feita alguma solicitação e essa solicitação é retornada por diferentes métodos REST. No caso, se for para busca de informação, é feito por um GET; PUT para atualizar; POST para incluir; e DELETE para remover. Resumindo, HTTP é a forma que o cliente conversa diretamente com o servidor para buscar o que precisa.*
+*JDBC é uma API que permite a conecção e comunicação da sua aplicação JAVA com o banco de dados.*
 
-**O que é REST e qual é a sua relação com o protocolo HTTP?**
-
-**Resp :**
-*REST é um formato de organizar e padronizar o jeito que as informações são buscadas e entregues. Sua relação com HTTP é fundamental justamente para isso: o cliente faz uma solicitação que vem através do HTTP pelas URLs, e o REST organiza e padroniza o retorno dessas informações para o cliente.*
-
-**O que é Web API e qual é a sua relação com REST?**
+**O que é ORM, cite 3 exemplos ?**
 
 **Resp :**
-*Web API é o mapeamento no código onde definimos as funções do REST, e essa é a relação entre os dois.*
+*ORM é oque traduz nossa aplicação para linguagem do banco de dados fazendo com que oque foi digitado no código seja  convertido e entendido pelo banco de dados.*
 
-**Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades.**
+*Exemplo de ORM: Hibernate (para Java), Django ORM (para Python), Entity Framework (para C#)*
 
-**Resp :**
-*Os métodos de solicitações HTTP utilizados pelo padrão REST são: GET, POST, PUT e DELETE.*
 
-* GET: Utilizado para buscar a informação solicitada.
-
-* POST: Utilizado para incluir dados ou criar.
-
-* PUT: Utilizado para atualizar os dados.
-
-* DELETE: Como o próprio nome já diz, é utilizado para exclusão de dados.
-
-**O que é Swagger?**
+**O que é JPA e qual é a sua relação com os ORM's ?**
 
 **Resp :**
-É uma ferramenta que auxilia na documentação e no teste da nossa Web API e dos nossos métodos REST.
+*JPA são as anotações e a API (interface) que seguimos para dar instruções ao ORM sobre como mapear nossos objetos para o banco de dados. O ORM, por sua vez, é a ferramenta que lê essas instruções e executa a conversão do código para a linguagem que o banco de dados entende, como o SQL. E essa é a relação entre eles, o JPA define os padrões e as regras e o ORM converte para linguagem que o banco entenda.*
+
+
+
+**O que éSpring Data ?**
+
+**Resp :**
+*Spring Data é uma dependência que simplifica métodos de alguma solicitação específica no banco de dados. Com ele, temos métodos criados para fazer essa conversão para a gente, o que economiza linhas e linhas de código para uma função.*
+
+**O que caracteriza um projeto "CRUD" básico ?**
+
+**Resp :**
+*Um projeto CRUD básico é caracterizado pela capacidade de executar as quatro operações fundamentais de gerenciamento de dados sobre um recurso. A sigla CRUD é um acrônimo para:*
+* *Create (Criar): a operação de inserir novos dados em um repositório (como um banco de dados).*
+* *Read (Ler): a operação de consultar ou buscar dados existentes.*
+* *Update (Atualizar): a operação de modificar dados já existentes.*
+* *Delete (Apagar): a operação de remover dados permanentemente.*
