@@ -6,10 +6,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import trilha.back.financys.Entitys.Categoria;
-import trilha.back.financys.Repositorys.CategoriaRepository;
+import trilha.back.financys.Services.CategoriaService;
 
+import java.net.URI;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
@@ -17,45 +20,75 @@ import java.util.Optional;
 public class CategoriaController {
 
     @Autowired
-    private CategoriaRepository repository;
+    private CategoriaService categoriaService;
 
     @PostMapping
     @Transactional
     public ResponseEntity<?> criarCategoria(@RequestBody @Valid Categoria categoria) {
-        var categoriaSalva = repository.save(categoria);
-        return ResponseEntity.status(HttpStatus.CREATED).body(categoriaSalva);
+        var categoriaSalva = categoriaService.save(categoria);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(categoriaSalva.getId())
+                .toUri();
+        return ResponseEntity.created(location).body(categoriaSalva);
     }
 
     @GetMapping
     public ResponseEntity<List<Categoria>> listarCategorias() {
-        var lista = repository.findAll();
+        var lista = categoriaService.findAll();
         return ResponseEntity.ok(lista);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> buscarPorId(@PathVariable Long id) {
+        Optional<Categoria> opt = categoriaService.findById(id);
+        if (opt.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Categoria com ID " + id + " não encontrada.");
+        }
+        return ResponseEntity.ok(opt.get());
+    }
+
+    @GetMapping("/id/{nome}")
+    public ResponseEntity<?> buscarIdPorNome(@PathVariable String nome) {
+        Long id = categoriaService.idCategoriaPorNome(nome);
+
+        if (id == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Categoria '" + nome + "' não encontrada.");
+        }
+
+        return ResponseEntity.ok(id);
+    }
+
 
     @PutMapping("/{id}")
     @Transactional
     public ResponseEntity<?> atualizarCategoria(@PathVariable Long id, @RequestBody Categoria dados) {
-        Optional<Categoria> categoriaOpt = repository.findById(id);
-        if (categoriaOpt.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Categoria com ID " + id + " não encontrada.");
+        try {
+            var salvo = categoriaService.updateCategoria(id, dados);
+            return ResponseEntity.ok(salvo);
+        } catch (NoSuchElementException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
         }
-
-        Categoria categoria = categoriaOpt.get();
-        if (dados.getNome() != null) categoria.setNome(dados.getNome());
-        if (dados.getDescricao() != null) categoria.setDescricao(dados.getDescricao());
-
-        repository.save(categoria);
-        return ResponseEntity.ok(categoria);
     }
 
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity<?> deletarCategoria(@PathVariable Long id) {
-        if (!repository.existsById(id)) {
+        if (!categoriaService.existsById(id)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Categoria com ID " + id + " não encontrada.");
         }
-        repository.deleteById(id);
+
+        boolean ok = categoriaService.deleteIfNoLancamentos(id);
+        if (!ok) {
+            // já sabemos que existem lançamentos vinculados
+            long vinculados = categoriaService.countLancamentosByCategoria(id);
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("Não é possível excluir: existem " + vinculados + " lançamento(s) vinculados.");
+        }
+
         return ResponseEntity.ok("Categoria deletada com sucesso.");
     }
 }

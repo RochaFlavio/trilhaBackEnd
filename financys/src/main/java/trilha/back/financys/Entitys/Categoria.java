@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.EqualsAndHashCode;
 
-
 @Table(name = "categorias")
 @Entity(name = "Categoria")
 @EqualsAndHashCode(of = "id")

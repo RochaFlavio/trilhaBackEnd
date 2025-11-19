@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
-import trilha.back.financys.DTOs.DtoAtualizarLancamento;
 
 import java.time.LocalDate;
 
@@ -44,21 +43,45 @@ public class Lancamento {
         this.categoria = categoria;
     }
 
-    public void atualizarLancamento(DtoAtualizarLancamento dados) {
-        if (dados.nome() != null)
-            this.nome = dados.nome();
-        if (dados.descricao() != null)
-            this.descricao = dados.descricao();
-        if (dados.tipo() != null)
-            this.tipo = dados.tipo();
-        if (dados.quantidade() != null && dados.quantidade() != 0)
-            this.quantidade = dados.quantidade();
-        if (dados.data() != null)
-            this.data = LocalDate.parse(dados.data());
-        if (dados.pago() != null)
-            this.pago = dados.pago();
+    public void atualizarLancamento(Lancamento dados) {
+        if (dados == null) return;
+
+        if (dados.getNome() != null) {
+            this.nome = dados.getNome();
+        }
+        if (dados.getDescricao() != null) {
+            this.descricao = dados.getDescricao();
+        }
+        if (dados.getTipo() != null) {
+            this.tipo = dados.getTipo();
+        }
+        if (dados.getQuantidade() != null && dados.getQuantidade() != 0) {
+            this.quantidade = dados.getQuantidade();
+        }
+        if (dados.getData() != null) {
+            this.data = dados.getData();
+        }
+        if (dados.getPago() != null) {
+            this.pago = dados.getPago();
+        }
+        if (dados.getCategoria() != null && dados.getCategoria().getId() != null) {
+            this.categoria = dados.getCategoria();
+        }
     }
 
+    @JsonProperty("id_Categoria")
+    public Long getIdCategoria() {
+        return (categoria != null) ? categoria.getId() : null;
+    }
+
+    @JsonProperty("id_Categoria")
+    public void setIdCategoriaJson(Long idCategoria) {
+        if (idCategoria != null) {
+            Categoria c = new Categoria();
+            c.setId(idCategoria);
+            this.categoria = c;
+        }
+    }
 
     public Long getId() {
         return id;
@@ -122,11 +145,6 @@ public class Lancamento {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
-    }
-
-    @JsonProperty("id_Categoria")
-    public Long getIdCategoriaJson() {
-        return (categoria != null) ? categoria.getId() : null;
     }
 
     @Override
