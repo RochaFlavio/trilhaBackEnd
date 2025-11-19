@@ -82,7 +82,7 @@ public class LancamentoService {
         Map<String, BigDecimal> somaPorChave = lancamentoRepository.findAll()
                 .stream()
                 .map(lancamentoMapper::toDTOChart)
-                .filter(d -> d != null) 
+                .filter(d -> d != null)
                 .collect(Collectors.groupingBy(
                         d -> (d.nome() == null ? "SEM_CATEGORIA" : d.nome()) + "::" + (d.tipo() == null ? "SEM_TIPO" : d.tipo().name()),
                         Collectors.mapping(
