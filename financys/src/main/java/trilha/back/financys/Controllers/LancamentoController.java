@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import trilha.back.financys.DTOs.DtoChart;
 import trilha.back.financys.Entitys.Lancamento;
 import trilha.back.financys.Services.LancamentoService;
 
@@ -53,6 +54,13 @@ public class LancamentoController {
         return ResponseEntity.ok(lancamentoService.listarTodosOrdenadosPorData()
                 .stream().filter(l -> l.getPago() == null || !l.getPago()).toList());
     }
+
+    @GetMapping("/chart")
+    public ResponseEntity<List<DtoChart>> chartPorCategoriaETipo() {
+        var lista = lancamentoService.gerarChartPorCategoriaETipo();
+        return ResponseEntity.ok(lista);
+    }
+
 
     @PutMapping("/{id}")
     @Transactional

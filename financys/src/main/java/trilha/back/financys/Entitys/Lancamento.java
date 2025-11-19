@@ -3,8 +3,10 @@ package trilha.back.financys.Entitys;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Table(name = "lancamentos")
@@ -22,6 +24,8 @@ public class Lancamento {
     private Integer quantidade;
     private LocalDate data;
     private Boolean pago;
+    @NotNull
+    private BigDecimal valor;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_Categoria")
@@ -32,7 +36,7 @@ public class Lancamento {
     }
 
     public Lancamento(Long id, String nome, String descricao, String tipo,
-                      Integer quantidade, LocalDate data, Boolean pago, Categoria categoria) {
+                      Integer quantidade, LocalDate data, Boolean pago, Categoria categoria, @NotNull BigDecimal valor) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -41,6 +45,7 @@ public class Lancamento {
         this.data = data;
         this.pago = pago;
         this.categoria = categoria;
+        this.valor = valor;
     }
 
     public void atualizarLancamento(Lancamento dados) {
@@ -67,6 +72,9 @@ public class Lancamento {
         if (dados.getCategoria() != null && dados.getCategoria().getId() != null) {
             this.categoria = dados.getCategoria();
         }
+        if (dados.getValor() != null) {
+            this.valor = dados.getValor();
+        }
     }
 
     @JsonProperty("id_Categoria")
@@ -81,6 +89,15 @@ public class Lancamento {
             c.setId(idCategoria);
             this.categoria = c;
         }
+    }
+
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 
     public Long getId() {
@@ -158,6 +175,7 @@ public class Lancamento {
                 ", data=" + data +
                 ", pago=" + pago +
                 ", idCategoria=" + (categoria != null ? categoria.getId() : null) +
+                "valor=" + valor +
                 '}';
     }
 }

@@ -83,7 +83,6 @@ public class CategoriaController {
 
         boolean ok = categoriaService.deleteIfNoLancamentos(id);
         if (!ok) {
-            // já sabemos que existem lançamentos vinculados
             long vinculados = categoriaService.countLancamentosByCategoria(id);
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body("Não é possível excluir: existem " + vinculados + " lançamento(s) vinculados.");
