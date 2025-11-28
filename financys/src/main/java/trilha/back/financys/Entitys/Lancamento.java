@@ -30,9 +30,8 @@ public class Lancamento {
     private String descricao;
 
     @NotNull(message = "Tipo não pode ser nulo")
-    @Enumerated(EnumType.STRING)           // <<--- USE STRING (importantíssimo)
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo", length = 20)
-    @Size(min = 3, max = 50, message = "O tipo deve ter entre 3 e 50 caracteres")
     private TipoLancamento tipo;
 
     @NotNull(message = "Quantidade não pode ser nula")

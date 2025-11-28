@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public record DtoLancamento(
+        Long id,
 
         @NotBlank(message = "Nome não pode ser nulo ou vazio")
         @Size(min = 3, max = 45, message = "O nome deve ter entre 3 e 45 caracteres")
@@ -20,9 +21,8 @@ public record DtoLancamento(
         String descricao,
 
         @NotNull(message = "Tipo não pode ser nulo")
-        @Enumerated(EnumType.STRING)           // <<--- USE STRING (importantíssimo)
-        @Column(name = "tipo", length = 20)
-        @Size(min = 3, max = 50, message = "O tipo deve ter entre 3 e 50 caracteres")
+        @Enumerated(EnumType.STRING)
+        @Column(name = "tipo")
         TipoLancamento tipo,
 
         @NotNull(message = "Quantidade não pode ser nula")
@@ -40,4 +40,5 @@ public record DtoLancamento(
 
         @PositiveOrZero(message = "O valor não pode ser negativo")
         BigDecimal valor
-) {}
+) {
+}
