@@ -1,6 +1,6 @@
 package trilha.back.financys.interfaces.dto;
 
-import trilha.back.financys.domain.lancamento.TipoLancamento;
+import trilha.back.financys.core.domain.lancamento.TipoLancamento;
 
 import java.math.BigDecimal;
 

@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.*;
-import trilha.back.financys.domain.lancamento.TipoLancamento;
+import trilha.back.financys.core.domain.lancamento.TipoLancamento;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
