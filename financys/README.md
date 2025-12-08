@@ -1,38 +1,54 @@
-<img width="1248" height="832" alt="Gemini_Generated_Image_te0eq3te0eq3te0e" src="https://github.com/user-attachments/assets/db49410c-fdf0-4d9a-a81d-13140ff2730f" />
+<img width="1248" height="832" alt="Gemini_Generated_Image_81scik81scik81sc" src="https://github.com/user-attachments/assets/669a9026-9bba-487a-91de-385eed0ba14f" />
 
-# Desafio 08
+# Desafio 09
 
 ## Respostas:
 
-**1.**  *O que são exceptions? (máx 5 linhas)*
+**1.**  *O que é um padrão de projeto e por que nós os utilizamos?*
 
-**Resp:** *Exceptions **(exceções)** são eventos inesperados que ocorrem durante a execução de um programa, interrompendo seu fluxo normal. Elas servem como um mecanismo para tratar erros de forma controlada, prevenindo que a aplicação **"quebre" (interrompa abruptamente)** e permitindo que o desenvolvedor exiba mensagens informativas ou execute ações corretivas, garantindo a continuidade do funcionamento do sistema.* 
+**Resp:** *O padrão de projeto é um jeito de deixar as coisas organizadas e utilizamos justamente para isso, organização, depois definimos qual tipo de padrão vamos usar e qual vai ser melhor encaixado no nosso projeto.* 
 
-**2.** *Qual é o funcionamento do try, catch e finally? (máx 10 linhas)*
+**2.** *Cite e explique com suas palavras:*
 
-**Resp:**
-*O funcionamento do try, catch e finally é um mecanismo para gerenciar erros em tempo de execução (exceções):*
-* **Try:** *É o mecanismo onde digitamos a parte do código que possa dar algum erro.*
+**A.Um dos padrões de criação:**
 
+**Resp:** *Um dos padrões de criação é o "Factory Method". Ele serve para centralizar a lógica de criação de objetos, permitindo que o sistema decida, em tempo de execução, qual tipo específico de objeto instanciar. Por exemplo, em um sistema de concessionária, usamos uma "fábrica" que, com base no pedido do cliente ("SUV" ou "Sedan"), nos entrega o objeto correto, sem que o código principal precise saber a complexidade de criar cada tipo de carro.*
 
-* **Catch:** *É o responsável por guardar nosso tratamento caso a linha do código informado no try venha a ocorrer.*
+**B. Um dos padrões estruturais:**
 
+**Resp:** *Dentro dos padrões estruturais, temos o "Adapter" (Adaptador). Ele é usado para fazer duas classes com interfaces incompatíveis trabalharem juntas. Ele atua como um "tradutor" que adapta a forma como uma classe existente funciona para o formato que seu sistema espera.*
 
-* **Finally:** *Vem em seguida, garantindo a execução de um bloco de código **(geralmente de limpeza de recursos)** independentemente de ocorrer um erro ou não. É ideal para garantir a liberação de recursos, como fechar arquivos ou conexões de rede, prevenindo vazamentos e garantindo que o programa continue de forma segura.*
+**C. Um dos padrões comportamentais:**
 
-**3.** *Qual a relação entre “try, catch e finally” e “throws”? (máx 5 linhas)*
+**Resp:** *Um dos padrões comportamentais mais comum é o "Observer" (Observador). Ele é a solução prática para a relação 1:N (um para muitos). O padrão permite que um objeto principal (o "Sujeito") notifique automaticamente múltiplos objetos interessados (os "Observadores") sempre que seu estado mudar, garantindo a comunicação eficiente entre eles.*
 
-**Resp:** *A relação do **throws** com o **try, catch e finally** é que essa assinatura no método serve para informar que o método pode lançar uma exceção **(dar algum erro)** e obriga o código que o chama a ter o **try/catch** para tratar essa exceção, caso contrário, o compilador apontará um erro.*
+**3. Explique o conceito de arquitetura de software e seu proposito:**
 
-**4.** *Para que serve a annotation @ExceptionHandler? (máx 5 linhas)*
+**Resp:** *A arquitetura de software ela é responsável pela organização do sistema e o seu propósito principal é garantir a qualidade e gerenciar a complexidade do projeto.*
 
-**Resp:** *A anotação **@ExceptionHandler** serve para ser utilizada em métodos de classes controladoras **(@Controller ou @ControllerAdvice)** para interceptar e tratar exceções específicas que ocorrem durante o processamento de requisições HTTP. Ela permite personalizar a resposta enviada ao cliente **(como códigos de status HTTP e mensagens de erro amigáveis)**, em vez de retornar um erro genérico do sistema.*
+**4. Qual arquitetura estamos seguindo até o momento? Justifique sua resposta.**
 
-**5.** *Para que serve o comando throw? (máx 5 linhas)*
+**Resp:** *No meu projeto estou usando a arquitetura por camadas, essa arquitetura é muito boa pois deixa cada coisa em seu devido lugar de uma forma organizada e que, se outra pessoa acessar o código, terá facilidade para achar a informação pelo fato de estar separado em pacotes de classes específicas. **Exemplo:** os **DTOs** estão em um pacote só de **DTOs**, **Controllers**, **Services**, **etc**., seguem da mesma forma. Isso deixa o código padrão e fácil de localizar a informação.*
 
-**Resp:** *O **throw** é usado para forçar a interrupção do programa quando uma condição que você considera um erro acontece.*
+**5. O que significa a sigla SOLID?**
 
-**6.** *Para que serve a annotation @ControllerAdvice? (máx 10 linhas)*
+**Resp:** *A sigla SOLID representa 5 princípios de design orientado a objetos que ajudam a criar código mais organizado, flexível e fácil de manter.*
 
-**Resp:** **@ControllerAdvice** *é a anotação que você coloca no topo da sua classe dedicada a gerenciar erros de forma centralizada.
-Essa classe funciona como um controlador global de exceções, onde cada método dentro dela, anotado com **@ExceptionHandler**, lida com um tipo específico de erro para toda a sua API.*
+**S:** *Single Responsibility Principle (Princípio da Responsabilidade Única)*
+
+**O:** *Open/Closed Principle (Princípio Aberto/Fechado)*
+
+**L:** *Liskov Substitution Principle (Princípio da Substituição de Liskov)*
+
+**I:** *Interface Segregation Principle (Princípio da Segregação de Interface)*
+
+**D:** *Dependency Inversion Principle (Inversão de Dependência)*
+
+**6. Quais princípios foram utilizados no projeto até o momento? Explique.
+(máx 10 linhas)**
+
+**Resp:** *No meu projeto original utilizei a arquitetura em camadas **(Controller, Service, Repository e Entity)**, separando bem as responsabilidades em pacotes específicos, o que facilita leitura e manutenção.
+Dentro dessa arquitetura, aplico o **Single Responsibility Principle**, pois cada classe possui uma única responsabilidade clara, como **controllers** cuidando apenas das requisições e services da lógica de negócio.
+Também sigo o **Open/Closed Principle**, já que posso estender funcionalidades criando novos métodos e classes sem modificar o que já funciona.
+Por fim, utilizo o **Dependency Inversion Principle**, porque os serviços dependem de interfaces de repositório e não diretamente da implementação concreta, permitindo futuras mudanças no banco sem alterar a lógica da aplicação.*
+
