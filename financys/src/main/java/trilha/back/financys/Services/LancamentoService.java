@@ -3,10 +3,7 @@ package trilha.back.financys.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import trilha.back.financys.DTOs.DtoAtualizarLancamento;
-import trilha.back.financys.DTOs.DtoChart;
-import trilha.back.financys.DTOs.DtoLancamento;
-import trilha.back.financys.DTOs.LancamentoMapper;
+import trilha.back.financys.DTOs.*;
 import trilha.back.financys.Entitys.Categoria;
 import trilha.back.financys.Entitys.Lancamento;
 import trilha.back.financys.Entitys.TipoLancamento;
@@ -58,12 +55,15 @@ public class LancamentoService {
     }
 
     public List<DtoLancamento> listarTodosOrdenadosPorData() {
-        return lancamentoRepository.findAll()
-                .stream()
+
+        List<Lancamento> lancamentos = lancamentoRepository.findAll();
+
+        return lancamentos.stream()
                 .sorted(Comparator.comparing(Lancamento::getData))
                 .map(lancamentoMapper::toDto)
                 .collect(Collectors.toList());
     }
+
 
     @Transactional
     public DtoLancamento atualizarLancamento(Long id, DtoAtualizarLancamento dto) {
@@ -145,11 +145,26 @@ public class LancamentoService {
     }
 
     public Integer calcularMedia(Integer x, Integer y) {
-        if (x == 0 || y == 0 ) {
+        if (x == 0 || y == 0) {
             throw new ArithmeticException("Divisão por zero não é permitida.");
-        }else if ( x < 0 || y < 0){
+        } else if (x < 0 || y < 0) {
             throw new ArithmeticException("Divisão por números negativos não são permitidos.");
         }
         return (x / y);
+    }
+
+    public List<DtoFiltro> buscarPorFiltro(LocalDate data, Integer quantidade, Boolean pago) {
+        List<Lancamento> todos = lancamentoRepository.findAll();
+
+        return todos.stream()
+                .filter(l -> (data == null || l.getData().equals(data)) &&
+                        (quantidade == null || l.getQuantidade().equals(quantidade)) &&
+                        (pago == null || l.getPago().equals(pago)))
+                .map(l -> new DtoFiltro(
+                        l.getData(),
+                        l.getQuantidade(),
+                        l.getPago()
+                ))
+                .toList();
     }
 }

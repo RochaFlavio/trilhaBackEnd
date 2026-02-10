@@ -38,4 +38,11 @@ public interface LancamentoMapper {
     @Mapping(source = "tipo", target = "tipo")
     @Mapping(source = "valor", target = "total")
     DtoChart toDTOChart(Lancamento lancamento);
+
+    Lancamento DadosParaFiltro(DtoFiltro dtoFiltro);
+
+    @Mapping(source = "data", target = "data")
+    @Mapping(source = "quantidade", target = "quantidade")
+    @Mapping(source = "pago", target = "pago")
+    DtoFiltro toDtoFiltro(Lancamento lancamento);
 }

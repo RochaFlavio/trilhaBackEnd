@@ -1,38 +1,33 @@
-<img width="1248" height="832" alt="Gemini_Generated_Image_te0eq3te0eq3te0e" src="https://github.com/user-attachments/assets/db49410c-fdf0-4d9a-a81d-13140ff2730f" />
+<img width="1264" height="848" alt="Gemini_Generated_Image_yej4yjyej4yjyej4" src="https://github.com/user-attachments/assets/79b60395-a3d0-4f35-bb3c-57cd4dc77c6d" />
 
-# Desafio 08
+# Desafio 12    
+## Respostas :
 
-## Respostas:
+**1.** *Explique o conceito de teste unitário?*
 
-**1.**  *O que são exceptions? (máx 5 linhas)*
+**Resp:** *O **teste unitário** serve para testar uma função ou parte do código de forma **exclusiva**. Por exemplo: se quero testar uma função expecifica, seleciono apenas ela para não precisar testar todas as outras funções do código inteiro.*
 
-**Resp:** *Exceptions **(exceções)** são eventos inesperados que ocorrem durante a execução de um programa, interrompendo seu fluxo normal. Elas servem como um mecanismo para tratar erros de forma controlada, prevenindo que a aplicação **"quebre" (interrompa abruptamente)** e permitindo que o desenvolvedor exiba mensagens informativas ou execute ações corretivas, garantindo a continuidade do funcionamento do sistema.* 
+**2.** *Descreva como fazer um código de teste.*
 
-**2.** *Qual é o funcionamento do try, catch e finally? (máx 10 linhas)*
+**Resp:** *Para criar um código de teste você segue uma lógica simples: primeiro você chama a função passando um valor para ela e depois confere se o resultado é o que você queria. O processo funciona criando um arquivo de teste que geralmente tem o mesmo nome da sua função original mas com o final .test, e dentro dele você dá um nome para esse teste escrevendo uma frase curta sobre o que aquela função específica deve fazer. Por fim, você faz a comparação usando uma palavra mágica como o expect ou o assert para confirmar se o resultado que a função devolveu é igual ao valor que você já sabe que é o correto.*
 
-**Resp:**
-*O funcionamento do try, catch e finally é um mecanismo para gerenciar erros em tempo de execução (exceções):*
-* **Try:** *É o mecanismo onde digitamos a parte do código que possa dar algum erro.*
+**3.** *Qual o intuito do teste unitário?*
 
+**Resp:** *O intuito é testar uma função específica do código, isolando apenas ela sem rodar o sistema inteiro e sem acessar o banco de dados*
 
-* **Catch:** *É o responsável por guardar nosso tratamento caso a linha do código informado no try venha a ocorrer.*
+**4.** *Quais são as ferramentas que utilizamos para realizar testes unitários(2 pelo
+menos).*
 
+**Resp:** 
+* **Jest:** *O mais usado para quem programa em JavaScript ou TypeScript. Jest Official*
+* **JUnit:** *O padrão absoluto para quem usa Java. JUnit.org*
 
-* **Finally:** *Vem em seguida, garantindo a execução de um bloco de código **(geralmente de limpeza de recursos)** independentemente de ocorrer um erro ou não. É ideal para garantir a liberação de recursos, como fechar arquivos ou conexões de rede, prevenindo vazamentos e garantindo que o programa continue de forma segura.*
+## Texto Stack Tracer e Explicações
 
-**3.** *Qual a relação entre “try, catch e finally” e “throws”? (máx 5 linhas)*
-
-**Resp:** *A relação do **throws** com o **try, catch e finally** é que essa assinatura no método serve para informar que o método pode lançar uma exceção **(dar algum erro)** e obriga o código que o chama a ter o **try/catch** para tratar essa exceção, caso contrário, o compilador apontará um erro.*
-
-**4.** *Para que serve a annotation @ExceptionHandler? (máx 5 linhas)*
-
-**Resp:** *A anotação **@ExceptionHandler** serve para ser utilizada em métodos de classes controladoras **(@Controller ou @ControllerAdvice)** para interceptar e tratar exceções específicas que ocorrem durante o processamento de requisições HTTP. Ela permite personalizar a resposta enviada ao cliente **(como códigos de status HTTP e mensagens de erro amigáveis)**, em vez de retornar um erro genérico do sistema.*
-
-**5.** *Para que serve o comando throw? (máx 5 linhas)*
-
-**Resp:** *O **throw** é usado para forçar a interrupção do programa quando uma condição que você considera um erro acontece.*
-
-**6.** *Para que serve a annotation @ControllerAdvice? (máx 10 linhas)*
-
-**Resp:** **@ControllerAdvice** *é a anotação que você coloca no topo da sua classe dedicada a gerenciar erros de forma centralizada.
-Essa classe funciona como um controlador global de exceções, onde cada método dentro dela, anotado com **@ExceptionHandler**, lida com um tipo específico de erro para toda a sua API.*
+| Texto Stack Tracer | Explicação (1 Frase) |
+|--------------------|----------------------|
+| org.mockito.exceptions.misusing.UnnecessaryStubbingException<br>Unnecessary stubbings detected<br>-> TrilhaBackTestes.java:80 | Mock criado no teste mas não utilizado |
+| java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "todos" is null | Tentativa de executar stream() em lista nula |
+| org.opentest4j.AssertionFailedError<br>Expected: 5<br>Actual: 1 | O teste esperava 5 registros mas retornou apenas 1 |
+| java.lang.ArithmeticException: Divisão por zero | Divisão realizada com divisor zero |
+| org.opentest4j.AssertionFailedError<br>expected: false<br>but was: true | O teste esperava lista vazia mas recebeu lista com dados |
