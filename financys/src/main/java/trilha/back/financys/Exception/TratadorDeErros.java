@@ -1,4 +1,4 @@
-package trilha.back.financys.Exception;
+package trilha.back.financys.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
@@ -84,6 +84,10 @@ public class TratadorDeErros {
         return ResponseEntity.status(400).body(ex.getMessage());
     }
 
+    @ExceptionHandler(ListaVaziaException.class)
+    public ResponseEntity<String> ListVoid(ListaVaziaException ex) {
+        return ResponseEntity.noContent().build();
+    }
 
     private record DadosErroValidacao(String campo, String mensagem) {
         public DadosErroValidacao(FieldError erro) {

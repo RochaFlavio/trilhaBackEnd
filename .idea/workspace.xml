@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8704624e-69c1-44e0-88d5-7a4f62efb4f2" name="Changes" comment="Desafio 2 ajustado">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/src/test/java/testes/TrilhaBackTestes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/financys/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/ClassComMain/AppCategoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/ClassComMain/AppLancamento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/ClassComMain/AppProduto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/desafio6/LancamentoMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/desafio7/CategoriaMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/entitys/Categoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/entitys/Lancamento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trilha/back/financys/entitys/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/trilha/back/financys/desafio6/LancamentoMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/trilha/back/financys/desafio7/CategoriaMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Controllers/LancamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Controllers/LancamentoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/DtoLancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/DtoLancamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/LancamentoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/LancamentoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/TratadorDeErros.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/TratadorDeErros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/ValidacaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/ValidacaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Repositorys/LancamentoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Repositorys/LancamentoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Services/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Services/LancamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -76,10 +73,18 @@
   "keyToString": {
     "Application.AppProduto.executor": "Run",
     "Application.Application.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveFalharQuandoFiltroNaoEncontraDados.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveFalharQuandoQuantidadeEsperadaErrada.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveGerarErroQuandoRepositoryRetornaNull.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveRetornarApenasDadosDoFiltro.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveRetornarApenasFiltros.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveRetornarErroQuandoNaoExistirDados.executor": "Run",
+    "JUnit.TrilhaBackTestes.deveRetornarListaVaziaQuandoFiltroNaoEncontrar.executor": "Run",
+    "JUnit.TrilhaBackTestes.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "DESAFIO-11",
+    "git-widget-placeholder": "DESAFIO-12",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/flavi/OneDrive/Documentos/trilhaBackEnd",
@@ -89,9 +94,110 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="trilha.back.financys.exception" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\flavi\OneDrive\Documentos\trilhaBackEnd\financys\src\main\java\trilha\back\financys" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TrilhaBackTestes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestes.deveFalharQuandoFiltroNaoEncontraDados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="deveFalharQuandoFiltroNaoEncontraDados" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestes.deveFalharQuandoQuantidadeEsperadaErrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="deveFalharQuandoQuantidadeEsperadaErrada" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestes.deveGerarErroQuandoRepositoryRetornaNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="deveGerarErroQuandoRepositoryRetornaNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestes.deveRetornarApenasDadosDoFiltro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="deveRetornarApenasDadosDoFiltro" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TrilhaBackTestes.deveFalharQuandoFiltroNaoEncontraDados" />
+      <item itemvalue="JUnit.TrilhaBackTestes.deveFalharQuandoQuantidadeEsperadaErrada" />
+      <item itemvalue="JUnit.TrilhaBackTestes.deveGerarErroQuandoRepositoryRetornaNull" />
+      <item itemvalue="JUnit.TrilhaBackTestes" />
+      <item itemvalue="JUnit.TrilhaBackTestes.deveRetornarApenasDadosDoFiltro" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TrilhaBackTestes" />
+        <item itemvalue="JUnit.TrilhaBackTestes.deveFalharQuandoFiltroNaoEncontraDados" />
+        <item itemvalue="JUnit.TrilhaBackTestes.deveFalharQuandoQuantidadeEsperadaErrada" />
+        <item itemvalue="JUnit.TrilhaBackTestes.deveGerarErroQuandoRepositoryRetornaNull" />
+        <item itemvalue="JUnit.TrilhaBackTestes.deveRetornarApenasDadosDoFiltro" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

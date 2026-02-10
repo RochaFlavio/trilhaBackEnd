@@ -1,4 +1,4 @@
-package trilha.back.financys.Exception;
+package trilha.back.financys.exception;
 
 public class ValidacaoException extends RuntimeException {
     public ValidacaoException(String mensagem) {

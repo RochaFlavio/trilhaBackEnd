@@ -2,16 +2,24 @@ package trilha.back.financys.Controllers;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import trilha.back.financys.DTOs.DtoAtualizarLancamento;
 import trilha.back.financys.DTOs.DtoChart;
+import trilha.back.financys.DTOs.DtoFiltro;
 import trilha.back.financys.DTOs.DtoLancamento;
 import trilha.back.financys.Services.LancamentoService;
+import trilha.back.financys.exception.ListaVaziaException;
 
 import java.net.URI;
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -34,7 +42,13 @@ public class LancamentoController {
 
     @GetMapping
     public ResponseEntity<List<DtoLancamento>> listarLancamentos() {
+
         var listar = lancamentoService.listarTodosOrdenadosPorData();
+
+        if (listar.isEmpty()) {
+            throw new ListaVaziaException();
+        }
+
         return ResponseEntity.ok(listar);
     }
 
@@ -64,6 +78,25 @@ public class LancamentoController {
         Integer resultado = x / y;
         return ResponseEntity.ok(resultado);
     }
+
+    @GetMapping("/filtro")
+    public ResponseEntity<List<DtoFiltro>> getLancamentosDependentes(
+            @RequestParam(value = "data", required = false)
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data,
+            @RequestParam(value = "quantidade", required = false) Integer quantidade,
+            @RequestParam(value = "pago", required = false) Boolean pago
+    ) {
+        List<DtoFiltro> lista =
+                lancamentoService.buscarPorFiltro(data, quantidade, pago);
+
+        if (lista.isEmpty()) {
+            throw new ListaVaziaException();
+        }
+
+
+        return ResponseEntity.ok(lista);
+    }
+
 
     @PutMapping("/{id}")
     @Transactional
