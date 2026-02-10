@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8704624e-69c1-44e0-88d5-7a4f62efb4f2" name="Changes" comment="Desafio 2 ajustado">
-      <change afterPath="$PROJECT_DIR$/financys/src/test/java/testes/TrilhaBackTestes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/financys/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Controllers/LancamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Controllers/LancamentoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/DtoLancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/DtoLancamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/LancamentoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/DTOs/LancamentoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/TratadorDeErros.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/TratadorDeErros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/ValidacaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Exception/ValidacaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Repositorys/LancamentoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Repositorys/LancamentoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Services/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/Services/LancamentoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

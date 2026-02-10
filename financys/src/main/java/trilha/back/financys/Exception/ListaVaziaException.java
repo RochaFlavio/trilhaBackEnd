@@ -2,6 +2,6 @@ package trilha.back.financys.exception;
 
 public class ListaVaziaException extends RuntimeException {
     public ListaVaziaException() {
-        super("A lista está vazia !");
+        super(" Não existe os dados pelo parâmetro passado ");
     }
 }
