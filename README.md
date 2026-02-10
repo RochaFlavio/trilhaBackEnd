@@ -1,46 +1,33 @@
-<img width="1264" height="848" alt="Gemini_Generated_Image_7x4hli7x4hli7x4h" src="https://github.com/user-attachments/assets/5ef0377b-e956-4836-87f1-8c99de85d4d5" />
+<img width="1264" height="848" alt="Gemini_Generated_Image_yej4yjyej4yjyej4" src="https://github.com/user-attachments/assets/79b60395-a3d0-4f35-bb3c-57cd4dc77c6d" />
 
-# Desafio 11
+# Desafio 12    
 ## Respostas :
 
-**1.** *O que são libs quando se trata de código? (máx 3 linhas)*
+**1.** *Explique o conceito de teste unitário?*
 
-**Resp:** *Libs são as bibliotecas de código, libs é uma abreviação de libraries, que são conjuntos de códigos pré-escritos que fornecem funcionalidades específicas para serem reutilizadas em diferentes programas*
+**Resp:** *O **teste unitário** serve para testar uma função ou parte do código de forma **exclusiva**. Por exemplo: se quero testar uma função expecifica, seleciono apenas ela para não precisar testar todas as outras funções do código inteiro.*
 
-**2.** *Cite 2 libs populares no Java e seu objetivo; (máx 3 linhas)*
+**2.** *Descreva como fazer um código de teste.*
+
+**Resp:** *Para criar um código de teste você segue uma lógica simples: primeiro você chama a função passando um valor para ela e depois confere se o resultado é o que você queria. O processo funciona criando um arquivo de teste que geralmente tem o mesmo nome da sua função original mas com o final .test, e dentro dele você dá um nome para esse teste escrevendo uma frase curta sobre o que aquela função específica deve fazer. Por fim, você faz a comparação usando uma palavra mágica como o expect ou o assert para confirmar se o resultado que a função devolveu é igual ao valor que você já sabe que é o correto.*
+
+**3.** *Qual o intuito do teste unitário?*
+
+**Resp:** *O intuito é testar uma função específica do código, isolando apenas ela sem rodar o sistema inteiro e sem acessar o banco de dados*
+
+**4.** *Quais são as ferramentas que utilizamos para realizar testes unitários(2 pelo
+menos).*
 
 **Resp:** 
+* **Jest:** *O mais usado para quem programa em JavaScript ou TypeScript. Jest Official*
+* **JUnit:** *O padrão absoluto para quem usa Java. JUnit.org*
 
-- **1 .** *Jackson (JSON Parsing Library):
-Objetivo: É a biblioteca padrão para converter objetos Java em formato JSON (serialização) e vice-versa (desserialização).*
+<h1 align= "center"> Texto Stack Tracer e Explicações </h1>
 
-
-- **2 .**  *Lombok: Objetivo: Reduzir o código boilerplate em Java, como getters, setters, construtores e métodos toString, facilitando a escrita de código mais limpo e conciso.*
-
-
-**3.** *Qual é o propósito do Maven, e qual é o seu relacionamento com o arquivo
-pom.xml? (máx 5 linhas)*
-
-**Resp:** *O **Maven** é o executor responsável por ler e processar as definições do **pom.xml**. Enquanto o **pom.xml** fornece as coordenadas e as regras (o plano), o **Maven** executa as ações (o trabalho pesado) para construir o projeto.*
-
-**4.** *Qual é a diferença do Maven para o Grandle? (máx 3 linhas)*
-
-**Resp:** *O **Maven** é focado em **padronização**, usando arquivos **XML** rígidos que facilitam a **organização** e o **aprendizado**. O **Gradle** é focado em **performance** e **flexibilidade**, usando scripts de código que tornam o **build** muito mais **rápido** e **customizável**. Enquanto o **Maven** segue regras fixas, o **Gradle** permite criar regras próprias para projetos complexos*
-
-**5.** *Com os conhecimentos adquiridos até o agora, realize uma conexão com o
-desafio 3 onde falamos sobre JDBC, os drivers de comunicação com os bancos de
-dados.*
-- **Qual a relação entre os termos lib, driver e JDBC?**
-
-**Resp:** *A relação entre esses três termos é de **hierarquia** e **especialização**. Uma **lib** é o conceito geral, o **Driver** é um tipo específico de **lib**, e o **JDBC** é a regra que diz como eles devem conversar. Resumo da relação:
-O **JDBC** é o manual de instruções, o **Driver** é o tradutor que segue esse manual, e a **Lib** é o pacote físico que traz esse tradutor para dentro do seu projeto.*
-
-
-- **Como é adicionado uma lib no projeto?**
-
-**Resp:** *Adicionamos uma dependência no nosso **pom.xml** para que o **Maven** baixe e interprete essa **lib** quando ela for chamada no nosso código.*
-
-- **Escolha um banco de dados (menos o H2) e explique como utilizar o driver de
-  comunicação.**
-
-**Resp:** Para usar o **driver** no **MySQL**, precisamos adicionar a **dependência** do banco no nosso **pom.xml**. Após isso, no arquivo **application.properties**, realizamos a configuração de **login**, **senha** e a **URL** com o nome do nosso banco. Com isso configurado, basta preparar o código: mapear as classes e colunas para que o sistema consiga interagir com o banco de dados.*
+| Texto Stack Tracer | Explicação (1 Frase) |
+|--------------------|----------------------|
+| org.mockito.exceptions.misusing.UnnecessaryStubbingException<br>Unnecessary stubbings detected<br>Following stubbings are unnecessary<br>-> TrilhaBackTestes.java:80 | Mock criado no teste mas não utilizado |
+| java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "todos" is null | Tentativa de executar stream() em lista nula |
+| org.opentest4j.AssertionFailedError<br>Expected: 5<br>Actual: 1 | O teste esperava 5 registros mas retornou apenas 1 |
+| java.lang.ArithmeticException: Divisão por zero | Divisão realizada com divisor zero |
+| org.opentest4j.AssertionFailedError<br>expected: false<br>but was: true | O teste esperava lista vazia mas recebeu lista com dados |
